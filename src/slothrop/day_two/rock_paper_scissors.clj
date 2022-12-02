@@ -1,4 +1,4 @@
-(ns slothrop.day-one.rock-paper-scissors
+(ns slothrop.day-two.rock-paper-scissors
   (:require [clojure.java.io :as io]
             [clojure.string :as string]))
 
