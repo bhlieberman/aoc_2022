@@ -1,6 +1,5 @@
 (ns slothrop.day-three.rucksacks
-  (:require [clojure.java.io :as io]
-            [clojure.string :as string]
+  (:require [clojure.java.io :as io] 
             [clojure.set :refer [intersection]]))
 
 (def lower (zipmap (map char (range 97 123)) (range 1 27)))
@@ -11,8 +10,8 @@
                     io/reader)]
   (->> rdr
        line-seq
-       (partition 3)
-       #_(map #(split-at (/ (count %) 2) %))
+       (partition 3) ; pt 2
+       #_(map #(split-at (/ (count %) 2) %)) ; pt 1
        (map (fn [[s1 s2 s3]] (intersection (set s1) (set s2) (set s3))))
        (map #(if (Character/isUpperCase (first %)) 
                (get upper (first %)) 
