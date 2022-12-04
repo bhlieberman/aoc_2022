@@ -12,5 +12,5 @@
          line-seq
          (partition 3) ; pt 2
          #_(map #(split-at (/ (count %) 2) %)) ; pt 1
-         (mapv (comp char->number first setify))
+         (map (comp char->number first setify))
          (apply +))))
